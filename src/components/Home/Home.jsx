@@ -12,6 +12,7 @@ import {
 import './home.css';
 import { Link } from 'react-router-dom';
 import vg from '../../assets/images/bg.png';
+import video from '../../assets/videos/intro.mp4';
 import { CgGoogle, CgYoutube } from 'react-icons/cg';
 import { SiUdemy, SiCoursera } from 'react-icons/si';
 import { DiAws } from 'react-icons/di';
@@ -27,7 +28,7 @@ function Home() {
           alignItems={'center'}
           spacing={['16', '56']}
         >
-          <VStack width={'full '}>
+          <VStack width={'full '} justifyContent={['center', 'flex-end']}>
             <Heading children={'LEARN FROM THE EXPERTS'} size={'2xl'} />
             <Text children={'Find Valueable Content At Reasonable Price'} />
             <Link to={'/courses'}>
@@ -36,17 +37,26 @@ function Home() {
               </Button>
             </Link>
           </VStack>
-          <Image boxSize={'md'} src={vg} objectFit={'contain'} />
+          <Image
+            boxSize={'md'}
+            src={vg}
+            objectFit={'contain'}
+            className="vector-graphics"
+          />
         </Stack>
       </div>
-      <Box padding={'8'}>
+      <Box padding={'8'} bg={'blackAlpha.800'}>
         <Heading
           children={'OUR BRANDS'}
           textAlign={'center'}
           fontFamily={'body'}
           color={'yellow.400'}
         />
-        <HStack>
+        <HStack
+          className="brandsBanner"
+          justifyContent={'space-evenly'}
+          marginTop={'4'}
+        >
           <CgGoogle />
           <CgYoutube />
           <SiUdemy />
@@ -54,6 +64,16 @@ function Home() {
           <DiAws />
         </HStack>
       </Box>
+      <div className="container2">
+        <video
+          src={video}
+          controls
+          autoPlay
+          controlsList="nodownload nofullscreen noremoteplayback"
+          disablePictureInPicture
+          disableRemotePlayback
+        ></video>
+      </div>
     </section>
   );
 }
