@@ -28,9 +28,18 @@ function Home() {
           alignItems={'center'}
           spacing={['16', '56']}
         >
-          <VStack width={'full '} justifyContent={['center', 'flex-end']}>
+          <VStack
+            width={'full'}
+            justifyContent={['center', 'flex-end']}
+            spacing={'8'}
+          >
             <Heading children={'LEARN FROM THE EXPERTS'} size={'2xl'} />
-            <Text children={'Find Valueable Content At Reasonable Price'} />
+            <Text
+              fontSize={'2xl'}
+              fontFamily="cursive"
+              textAlign={['center', 'left']}
+              children={'Find Valueable Content At Reasonable Price'}
+            />
             <Link to={'/courses'}>
               <Button size={'lg'} colorScheme="yellow">
                 Expore Now
