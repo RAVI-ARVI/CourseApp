@@ -22,6 +22,7 @@ const Header = () => {
   const isAuthenticated = true;
   function logouthandler() {
     console.log('logout');
+    onClose();
   }
   return (
     <>
@@ -44,11 +45,19 @@ const Header = () => {
           <DrawerHeader borderBottomWidth={'1px'}>COURSE BUNDLER</DrawerHeader>
           <DrawerBody>
             <VStack>
-              <LinkButton />
-              <LinkButton url="/courses" title="Browse All Courses" />
-              <LinkButton url="/request" title="Request a Course" />
-              <LinkButton url="/contact" title="Contact Us" />
-              <LinkButton url="/about" title="About" />
+              <LinkButton onClose={onClose} />
+              <LinkButton
+                url="/courses"
+                title="Browse All Courses"
+                onClose={onClose}
+              />
+              <LinkButton
+                url="/request"
+                title="Request a Course"
+                onClose={onClose}
+              />
+              <LinkButton url="/contact" title="Contact Us" onClose={onClose} />
+              <LinkButton url="/about" title="About" onClose={onClose} />
               <HStack
                 justifyContent={'space-evenly'}
                 position="absolute"
@@ -60,7 +69,7 @@ const Header = () => {
                   <>
                     <VStack>
                       <HStack>
-                        <Link to={'/profile'}>
+                        <Link to={'/profile'} onClick={onClose}>
                           <Button variant={'ghost'} colorScheme="yellow">
                             Profile
                           </Button>
@@ -70,7 +79,7 @@ const Header = () => {
                         </Button>
                       </HStack>
                       {user && user.role === 'admin' && (
-                        <Link to="/admin/dashboard">
+                        <Link to="/admin/dashboard" onClick={onClose}>
                           {' '}
                           <Button colorScheme="purple" variant={'ghost'}>
                             <RiDashboardFill style={{ margin: '4px' }} />{' '}
@@ -102,9 +111,9 @@ const Header = () => {
 
 export default Header;
 
-function LinkButton({ url = '/', title = 'Home' }) {
+function LinkButton({ url = '/', title = 'Home', onClose }) {
   return (
-    <Link to={url}>
+    <Link to={url} onClick={onClose}>
       <Button variant={'ghost'}>{title}</Button>
     </Link>
   );
