@@ -1,6 +1,8 @@
 import { Suspense, lazy } from 'react';
 import Header from '../components/Layout/Header/Header';
 import { Outlet } from 'react-router-dom';
+import Footer from '../components/Layout/Footer/Footer';
+import Login from '../components/Auth/Login';
 
 const Home = lazy(() => import('../components/Home'));
 const Courses = lazy(() => import('../components/Courses'));
@@ -26,6 +28,10 @@ export const mainRoutes = [
           </Suspense>
         ),
       },
+      {
+        path: '/login',
+        element: <Login />,
+      },
     ],
   },
 ];
@@ -35,6 +41,7 @@ function AppLayout() {
     <>
       <Header />
       <Outlet />
+      <Footer />
     </>
   );
 }
