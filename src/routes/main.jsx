@@ -9,6 +9,8 @@ import ResetPassword from '../components/Auth/ResetPassword';
 
 const Home = lazy(() => import('../components/Home'));
 const Courses = lazy(() => import('../components/Courses'));
+const Contact = lazy(() => import('../components/Contact'));
+const Request = lazy(() => import('../components/Request'));
 
 export const mainRoutes = [
   {
@@ -28,6 +30,22 @@ export const mainRoutes = [
         element: (
           <Suspense fallback={<h1>loading... </h1>}>
             <Courses />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/contact',
+        element: (
+          <Suspense fallback={<h1>loading... </h1>}>
+            <Contact />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/request',
+        element: (
+          <Suspense fallback={<h1>loading.........</h1>}>
+            <Request />
           </Suspense>
         ),
       },
