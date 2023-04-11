@@ -19,7 +19,7 @@ const Header = () => {
   const user = {
     role: 'admin',
   };
-  const isAuthenticated = true;
+  const isAuthenticated = false;
   function logouthandler() {
     console.log('logout');
     onClose();
@@ -91,11 +91,11 @@ const Header = () => {
                   </>
                 ) : (
                   <>
-                    <Link to={'/login'}>
+                    <Link to={'/login'} onClick={onClose}>
                       <Button colorScheme="yellow">Login</Button>
                     </Link>
                     <p>OR</p>
-                    <Link to={'/register'}>
+                    <Link to={'/register'} onClick={onClose}>
                       <Button colorScheme="yellow">Sign Up</Button>
                     </Link>
                   </>

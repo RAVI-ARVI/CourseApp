@@ -45,7 +45,7 @@ function Login() {
             />
           </Box>
           <Box>
-            <Link to="/fogetpassword">
+            <Link to="/forgetpassword">
               <Button fontSize={'sm'} variant={'link'}>
                 Forget Password?
               </Button>

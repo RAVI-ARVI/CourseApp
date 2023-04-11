@@ -3,6 +3,9 @@ import Header from '../components/Layout/Header/Header';
 import { Outlet } from 'react-router-dom';
 import Footer from '../components/Layout/Footer/Footer';
 import Login from '../components/Auth/Login';
+import Register from '../components/Auth/Register';
+import ForgetPassword from '../components/Auth/ForgetPassword';
+import ResetPassword from '../components/Auth/ResetPassword';
 
 const Home = lazy(() => import('../components/Home'));
 const Courses = lazy(() => import('../components/Courses'));
@@ -31,6 +34,18 @@ export const mainRoutes = [
       {
         path: '/login',
         element: <Login />,
+      },
+      {
+        path: '/register',
+        element: <Register />,
+      },
+      {
+        path: '/forgetpassword',
+        element: <ForgetPassword />,
+      },
+      {
+        path: '/resetpassword/:token',
+        element: <ResetPassword />,
       },
     ],
   },
