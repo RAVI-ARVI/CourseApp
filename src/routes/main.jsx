@@ -11,6 +11,7 @@ const Home = lazy(() => import('../components/Home'));
 const Courses = lazy(() => import('../components/Courses'));
 const Contact = lazy(() => import('../components/Contact'));
 const Request = lazy(() => import('../components/Request'));
+const About = lazy(() => import('../components/About'));
 
 export const mainRoutes = [
   {
@@ -56,6 +57,10 @@ export const mainRoutes = [
       {
         path: '/register',
         element: <Register />,
+      },
+      {
+        path: '/about',
+        element: <About />,
       },
       {
         path: '/forgetpassword',
