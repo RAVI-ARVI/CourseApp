@@ -6,6 +6,10 @@ import Login from '../components/Auth/Login';
 import Register from '../components/Auth/Register';
 import ForgetPassword from '../components/Auth/ForgetPassword';
 import ResetPassword from '../components/Auth/ResetPassword';
+import Subscribe from '../components/Payments/Subscribe';
+import PaymentSuccess from '../components/Payments/PaymentSuccess';
+import PaymentFail from '../components/Payments/PaymentFail';
+import NotFound from '../components/Layout/Notfound/NotFound';
 
 const Home = lazy(() => import('../components/Home'));
 const Courses = lazy(() => import('../components/Courses'));
@@ -69,6 +73,22 @@ export const mainRoutes = [
       {
         path: '/resetpassword/:token',
         element: <ResetPassword />,
+      },
+      {
+        path: '/subscribe',
+        element: <Subscribe />,
+      },
+      {
+        path: '/paymentsuccess',
+        element: <PaymentSuccess />,
+      },
+      {
+        path: '/paymentfail',
+        element: <PaymentFail />,
+      },
+      {
+        path: '*',
+        element: <NotFound />,
       },
     ],
   },
