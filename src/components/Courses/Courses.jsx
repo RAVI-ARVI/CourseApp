@@ -57,7 +57,7 @@ const Course = ({
         textTransform={'uppercase'}
       />
       <Stack direction={['column', 'row']} alignItems={'center'}>
-        <Link to={`/course/${id}`}>
+        <Link to={`/courses/${id}`}>
           <Button colorScheme="yellow"> Watch Now</Button>
         </Link>
         <Button

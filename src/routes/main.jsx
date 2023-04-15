@@ -16,6 +16,7 @@ const Courses = lazy(() => import('../components/Courses'));
 const Contact = lazy(() => import('../components/Contact'));
 const Request = lazy(() => import('../components/Request'));
 const About = lazy(() => import('../components/About'));
+const CoursePage = lazy(() => import('../components/CoursePage'));
 
 export const mainRoutes = [
   {
@@ -35,6 +36,14 @@ export const mainRoutes = [
         element: (
           <Suspense fallback={<h1>loading... </h1>}>
             <Courses />
+          </Suspense>
+        ),
+      },
+      {
+        path: '/courses/:id',
+        element: (
+          <Suspense fallback={<h1>loading.........</h1>}>
+            <CoursePage />
           </Suspense>
         ),
       },
