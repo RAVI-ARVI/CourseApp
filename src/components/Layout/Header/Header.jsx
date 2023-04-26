@@ -19,7 +19,7 @@ const Header = () => {
   const user = {
     role: 'admin',
   };
-  const isAuthenticated = false;
+  const isAuthenticated = true;
   function logouthandler() {
     console.log('logout');
     onClose();
@@ -32,6 +32,7 @@ const Header = () => {
         colorScheme="yellow"
         width={'12'}
         height={'12'}
+        zIndex={'overlay'}
         rounded={'full'}
         position={'fixed'}
         top="6"

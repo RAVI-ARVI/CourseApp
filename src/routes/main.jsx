@@ -10,6 +10,7 @@ import Subscribe from '../components/Payments/Subscribe';
 import PaymentSuccess from '../components/Payments/PaymentSuccess';
 import PaymentFail from '../components/Payments/PaymentFail';
 import NotFound from '../components/Layout/Notfound/NotFound';
+import Profile from '../components/Profile/Profile';
 
 const Home = lazy(() => import('../components/Home'));
 const Courses = lazy(() => import('../components/Courses'));
@@ -74,6 +75,10 @@ export const mainRoutes = [
       {
         path: '/about',
         element: <About />,
+      },
+      {
+        path: '/profile',
+        element: <Profile />,
       },
       {
         path: '/forgetpassword',
