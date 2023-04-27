@@ -11,6 +11,8 @@ import PaymentSuccess from '../components/Payments/PaymentSuccess';
 import PaymentFail from '../components/Payments/PaymentFail';
 import NotFound from '../components/Layout/Notfound/NotFound';
 import Profile from '../components/Profile/Profile';
+import ChangePassword from '../components/Profile/ChangePassword';
+import UpdateProfile from '../components/Profile/UpdateProfile';
 
 const Home = lazy(() => import('../components/Home'));
 const Courses = lazy(() => import('../components/Courses'));
@@ -79,6 +81,14 @@ export const mainRoutes = [
       {
         path: '/profile',
         element: <Profile />,
+      },
+      {
+        path: '/changepassword',
+        element: <ChangePassword />,
+      },
+      {
+        path: '/updateprofile',
+        element: <UpdateProfile />,
       },
       {
         path: '/forgetpassword',
