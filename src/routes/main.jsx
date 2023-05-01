@@ -13,6 +13,10 @@ import NotFound from '../components/Layout/Notfound/NotFound';
 import Profile from '../components/Profile/Profile';
 import ChangePassword from '../components/Profile/ChangePassword';
 import UpdateProfile from '../components/Profile/UpdateProfile';
+import Dashbord from '../components/Admin/Dashbord/Dashbord';
+import CreateCourse from '../components/Admin/CreateCourse/CreateCourse';
+import Users from '../components/Admin/Users/Users';
+import AdminCourses from '../components/Admin/AdminCourses/AdminCourses';
 
 const Home = lazy(() => import('../components/Home'));
 const Courses = lazy(() => import('../components/Courses'));
@@ -110,6 +114,24 @@ export const mainRoutes = [
         path: '/paymentfail',
         element: <PaymentFail />,
       },
+      //Admin Routes
+      {
+        path: '/admin/dashboard',
+        element: <Dashbord />,
+      },
+      {
+        path: '/admin/createcourse',
+        element: <CreateCourse />,
+      },
+      {
+        path: '/admin/courses',
+        element: <AdminCourses />,
+      },
+      {
+        path: '/admin/users',
+        element: <Users />,
+      },
+
       {
         path: '*',
         element: <NotFound />,
