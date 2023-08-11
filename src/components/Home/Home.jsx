@@ -24,7 +24,7 @@ function Home() {
         <Stack
           direction={['column', 'row']}
           height={'100%'}
-          justifyContent={['center', 'space-between']} //you can add flex-end at web
+          justifyContent={['center', 'space-between']}
           alignItems={'center'}
           spacing={['16', '56']}
         >

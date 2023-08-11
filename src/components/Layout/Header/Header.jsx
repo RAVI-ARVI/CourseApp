@@ -1,5 +1,3 @@
-import React from 'react';
-import { ColorModeSwitcher } from '../../../ColorModeSwitcher';
 import {
   Button,
   Drawer,
@@ -11,8 +9,10 @@ import {
   VStack,
   useDisclosure,
 } from '@chakra-ui/react';
+import React from 'react';
 import { RiDashboardFill, RiLogoutBoxLine, RiMenu5Fill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import { ColorModeSwitcher } from '../../../ColorModeSwitcher';
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -65,7 +65,6 @@ const Header = () => {
                 bottom={'2rem'}
                 width="80%"
               >
-                {' '}
                 {isAuthenticated ? (
                   <>
                     <VStack>
@@ -81,7 +80,6 @@ const Header = () => {
                       </HStack>
                       {user && user.role === 'admin' && (
                         <Link to="/admin/dashboard" onClick={onClose}>
-                          {' '}
                           <Button colorScheme="purple" variant={'ghost'}>
                             <RiDashboardFill style={{ margin: '4px' }} />{' '}
                             Dashboard

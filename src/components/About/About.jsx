@@ -10,13 +10,13 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import React from 'react';
+import { RiSecurePaymentFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import video from '../../assets/videos/intro.mp4';
-import { RiSecurePaymentFill } from 'react-icons/ri';
 const Founder = () => (
   <Stack direction={['column', 'row']} spacing={['4', '16']} padding={'8'}>
     <VStack>
-      <Avatar boxSize={['40', '48']} />
+      <Avatar src="" boxSize={['40', '48']} />
       <Text children="Co-Founder" opacity={'0.7'} />
     </VStack>
     <VStack justifyContent={'center'} alignItems={['center', 'flex-start']}>

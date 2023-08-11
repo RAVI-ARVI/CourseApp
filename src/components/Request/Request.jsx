@@ -58,12 +58,11 @@ function Request() {
             Send
           </Button>
           <Box my="4">
-            See Avaliable Courses ! {'  '}
+            See Avaliable Courses !
             <Link to={'/courses'}>
               <Button colorScheme="yellow" variant={'link'}>
-                Click {'  '}
+                Click
               </Button>
-              {'  '}
               here
             </Link>
           </Box>

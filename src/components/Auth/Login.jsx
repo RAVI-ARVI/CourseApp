@@ -19,7 +19,6 @@ function Login() {
         <Heading children={'Welcome to CourseBundler'} />
         <form style={{ width: '100%' }}>
           <Box my={'4'}>
-            {' '}
             <FormLabel htmlFor="email" children="Email Address" />
             <Input
               required
@@ -33,7 +32,7 @@ function Login() {
           </Box>
           <Box my={'4'}>
             {' '}
-            <FormLabel htmlFor="password" children="Password Address" />
+            <FormLabel htmlFor="password" children="Password " />
             <Input
               required
               id="password"

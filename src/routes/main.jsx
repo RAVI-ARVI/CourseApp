@@ -1,23 +1,22 @@
 import { Suspense, lazy } from 'react';
-import Header from '../components/Layout/Header/Header';
 import { Outlet } from 'react-router-dom';
-import Footer from '../components/Layout/Footer/Footer';
+import AdminCourses from '../components/Admin/AdminCourses/AdminCourses';
+import CreateCourse from '../components/Admin/CreateCourse/CreateCourse';
+import Dashbord from '../components/Admin/Dashbord/Dashbord';
+import Users from '../components/Admin/Users/Users';
+import ForgetPassword from '../components/Auth/ForgetPassword';
 import Login from '../components/Auth/Login';
 import Register from '../components/Auth/Register';
-import ForgetPassword from '../components/Auth/ForgetPassword';
 import ResetPassword from '../components/Auth/ResetPassword';
-import Subscribe from '../components/Payments/Subscribe';
-import PaymentSuccess from '../components/Payments/PaymentSuccess';
-import PaymentFail from '../components/Payments/PaymentFail';
+import Footer from '../components/Layout/Footer/Footer';
+import Header from '../components/Layout/Header/Header';
 import NotFound from '../components/Layout/Notfound/NotFound';
-import Profile from '../components/Profile/Profile';
+import PaymentFail from '../components/Payments/PaymentFail';
+import PaymentSuccess from '../components/Payments/PaymentSuccess';
+import Subscribe from '../components/Payments/Subscribe';
 import ChangePassword from '../components/Profile/ChangePassword';
+import Profile from '../components/Profile/Profile';
 import UpdateProfile from '../components/Profile/UpdateProfile';
-import Dashbord from '../components/Admin/Dashbord/Dashbord';
-import CreateCourse from '../components/Admin/CreateCourse/CreateCourse';
-import Users from '../components/Admin/Users/Users';
-import AdminCourses from '../components/Admin/AdminCourses/AdminCourses';
-
 const Home = lazy(() => import('../components/Home'));
 const Courses = lazy(() => import('../components/Courses'));
 const Contact = lazy(() => import('../components/Contact'));
@@ -114,7 +113,7 @@ export const mainRoutes = [
         path: '/paymentfail',
         element: <PaymentFail />,
       },
-      //Admin Routes
+      // //Admin Routes
       {
         path: '/admin/dashboard',
         element: <Dashbord />,

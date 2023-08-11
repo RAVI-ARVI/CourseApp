@@ -43,6 +43,7 @@ function Profile() {
   const removeFromPlaylistHandle = id => console.log(id);
   const changeImageSubmitHandler = (e, image) => {
     e.preventDefault();
+    console.log(e, 'this is image');
   };
   const { isOpen, onClose, onOpen } = useDisclosure();
   return (

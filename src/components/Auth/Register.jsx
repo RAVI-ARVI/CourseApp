@@ -19,7 +19,7 @@ export const fileUploadcss = {
   color: '#ECC94B',
   backgroundColor: 'white',
 };
-const fileUploadStyle = {
+export const fileUploadStyle = {
   '&::file-selector-button': fileUploadcss,
 };
 function Register() {

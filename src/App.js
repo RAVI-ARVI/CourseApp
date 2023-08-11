@@ -6,6 +6,7 @@ function App() {
   // window.addEventListener('contextmenu', e => {
   //   e.preventDefault();
   // });
+
   const app = createBrowserRouter(mainRoutes);
 
   return <RouterProvider router={app} />;

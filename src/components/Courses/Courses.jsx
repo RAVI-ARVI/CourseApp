@@ -71,24 +71,24 @@ const Course = ({
     </VStack>
   );
 };
-
+export const categories = [
+  'Web development',
+  'Artificial Intellegence',
+  'App Developement',
+  'Web development',
+  'Artificial Intellegence',
+  'App Developement',
+  'Web development',
+  'Artificial Intellegence',
+  'App Developement',
+  'Web development',
+  'Artificial Intellegence',
+  'App Developement',
+];
 function Courses() {
   const [Keyword, setKeyword] = useState('');
   const [categorie, setCategorie] = useState('');
-  const categories = [
-    'Web development',
-    'Artificial Intellegence',
-    'App Developement',
-    'Web development',
-    'Artificial Intellegence',
-    'App Developement',
-    'Web development',
-    'Artificial Intellegence',
-    'App Developement',
-    'Web development',
-    'Artificial Intellegence',
-    'App Developement',
-  ];
+
   return (
     <Container minH={'95vh'} maxW="container.lg" padding={'8'}>
       <Heading children="All Courses" m={'8'} />
