@@ -5,6 +5,7 @@ import {
   HStack,
   Heading,
   Table,
+  TableCaption,
   TableContainer,
   Tbody,
   Td,
@@ -49,7 +50,7 @@ function Users() {
         />
         <TableContainer w={['100vw', 'full']}>
           <Table variant={'simple'} size={'lg'}>
-            <TableContainer>All available users in the database</TableContainer>
+            <TableCaption>All available users in the database</TableCaption>
             <Thead>
               <Tr>
                 <Th>Id</Th>
